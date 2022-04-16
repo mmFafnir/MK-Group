@@ -43,7 +43,7 @@ if(btnBottom){
 
 const path = {
     MAIN: '/MK-Group/',
-    WORKS: '/MK-Group/works.html''
+    WORKS: '/MK-Group/works.html'
 } 
 if(window.location.pathname == path.MAIN) {
     const currentLinkTo = localStorage.get('linkTo');
