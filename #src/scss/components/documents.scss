@@ -1,0 +1,22 @@
+.documents{
+
+
+    padding: 50px 10px;
+    &__body{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.documents-item{
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .documents{
+
+        &__body{
+            flex-wrap: wrap;
+            justify-content: start;
+        }
+    }
+}
