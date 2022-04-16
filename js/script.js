@@ -42,7 +42,7 @@ if(btnBottom){
 }
 
 const path = {
-    MAIN: '/',
+    MAIN: '/MK-Group/',
     WORKS: '/works.html'
 } 
 if(window.location.pathname == path.MAIN) {
