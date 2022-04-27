@@ -28,7 +28,8 @@ if(btnBottom){
 const path = {
     MAIN: '/',
     WORKS: '/works.html'
-} 
+}
+ 
 if(window.location.pathname == path.MAIN) {
     const currentLinkTo = localStorage.get('linkTo');
     if(currentLinkTo){

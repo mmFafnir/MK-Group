@@ -94,3 +94,21 @@
 
     }
 }
+
+@media (max-width: 550px) {
+    .contacts{
+        padding: 100px 0px;
+
+        &__title{
+            padding: 0px 10px;
+        }
+        &__right{
+            padding: 0px 10px;
+        }
+
+        &__img{
+            border-radius: 0px;
+            box-shadow: none;
+        }
+    }
+}
