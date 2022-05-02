@@ -22,26 +22,18 @@ const swiper = new Swiper('.works-swiper', {
       el: '.swiper-scrollbar',
     },
     
-    breakpoints: {
-      
-      666: {
-        slidesPerView: 3,
-      },
-
-      490 :{
-        slidesPerView: 2,
-      }
-    }
-  });
   
-  const currentSlideBlock = document.querySelector('.current-slide');
-  const allSlidesPartners  = document.querySelectorAll('.partners-slide').length;
+  });
+
+  
+  // const currentSlideBlock = document.querySelector('.current-slide');
+  // const allSlidesPartners  = document.querySelectorAll('.partners-slide').length;
 
   const swiperPartners = new Swiper('.partners-swiper', {
     // Optional parameters
     direction: 'horizontal',
-    slidesPerView: 1,
-    loop: true,
+    slidesPerView: 3,
+    loop: false,
     spaceBetween: 10,
     
     // If we need pagination
@@ -61,19 +53,18 @@ const swiper = new Swiper('.works-swiper', {
     },
 
     breakpoints: {
-      550: {
-        slidesPerView: 3,
+      900:{
+        slidesPerView: 5,
       }
     },
-
     on: {
-      slideChange: function(){
+      // slideChange: function(){
 
-        const index_currentSlide = this.realIndex + 1;
-        currentSlideBlock.innerHTML = `<b>0${index_currentSlide}</b>/0${allSlidesPartners}`
+      //   const index_currentSlide = this.realIndex + 1;
+      //   currentSlideBlock.innerHTML = `<b>0${index_currentSlide}</b>/0${allSlidesPartners}`
 
       
-      }
+      // }
     }
   });
-  console.log(swiperPartners)
+  

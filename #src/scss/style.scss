@@ -42,21 +42,51 @@ h1,h2,h3,h4,a,p{
     font-weight: 700;
     align-items: center;
     display: flex;
-    margin-bottom: 70px;
+    margin-bottom: 45px;
     
 
-    &::before{
-        content: '';
-        display: block;
-        margin-right: 10px;
-        background-color: #002EFE;
-        width: 11px;
-        height: 11px;
-        border-radius: 50%;
+    // &::before{
+    //     content: '';
+    //     display: block;
+    //     margin-right: 10px;
+    //     background-color: #002EFE;
+    //     width: 11px;
+    //     height: 11px;
+    //     border-radius: 50%;
 
-    }
+    // }
 }
 
+.btn{
+        width: 381.63px;
+        height: 89.11px;
+    
+        display: block;
+        
+        font-size: 15px;
+        font-weight: 700;
+        border: solid 1px #E5C182;
+        text-transform: uppercase;
+        font-family:inherit;
+        margin-top: 60px;
+        span{
+            background-color: #E5C182; 
+            color: #AA6B00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            font-family: 'Montserrat', sans-serif;
+            transition-duration: 0.3s;
+        }
+        span:hover{
+            background: transparent;
+            transition-delay: 0s;
+            
+        }
+
+}
 @import 'components/header.scss';
 @import 'components/home.scss';
 @import 'components/about.scss';
@@ -109,21 +139,22 @@ h1,h2,h3,h4,a,p{
     position: absolute;
     height: 1000px;
     width: 600px;
-    bottom: 30%;
+    bottom: -8%;
     right: -140px;
     img{
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
         position: absolute;
     }
     .blades{
         transform-origin: center;
         transform: rotate(45deg);
-        width: auto;
-        height: auto;
-        top: 60px;
-        left: 2px;
+        width: 95%;
+        object-fit: contain;
+        height: 95%;
+        top: -14.5%;
+        left: -1.4%;
         animation-name: windmill;
         animation-duration: 5s;
         animation-iteration-count: infinite;
@@ -133,15 +164,14 @@ h1,h2,h3,h4,a,p{
         filter: blur(9px);
         right: auto;
         left: -10%;
-        bottom: 20%;
+        bottom: 35%;
         width: 650px;
         height: 870px;
         .blades{
             width: 70%;
             height: auto;
-            top: 67px;
-            left: 76px;
-            
+            top: 3%;
+            left: 73px;
         }
     }
 }
@@ -162,4 +192,10 @@ h1,h2,h3,h4,a,p{
          display: none;
      }
  }   
+}
+@media (max-width: 390px) {
+    .btn{
+        width: 260px;
+        height: 78.11px;
+    }
 }
