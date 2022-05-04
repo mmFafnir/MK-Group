@@ -3,10 +3,97 @@
 
     padding: 50px 10px;
     &__body{
-        display: flex;
-        justify-content: space-between;
+        // display: flex;
+        // justify-content: space-between;
     }
 }
+
+
+.swiper-documents {
+
+    
+    &__nav{
+        height: 70px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 535px;
+        padding: 0px 50px;
+        &:before,
+        &:after{
+            content: '';
+            display: block;
+            flex: 0 1 400px;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(229, 193, 130, 0) 0.72%, #FFA913 55.54%, rgba(229, 193, 130, 0) 102.9%);
+
+        }
+        
+        .swiper-pagination {
+            margin-top: 14px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .swiper-pagination-bullet{
+                width: 8px;
+                height: 8px;
+                background-color: rgba(254, 172, 28, 1);
+                &-active{
+                    // margin-top: 1.5px;
+                    width: 11px;
+                    height: 11px;
+                }
+            }
+        }
+        .swiper-button-prev,
+        .swiper-button-next{
+            color: rgba(254, 172, 28, 1);
+            &::after{
+                
+                font-size: 20px ;
+            }
+        }
+        
+    }
+}
+
+
+.slide-documents{
+    height: 467px;
+
+    &__img{
+        height: 382px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            object-fit: contain;
+        }
+    }
+    &__desc{
+        width: 100%;
+        margin-top: 26px;
+        font-size: 20px;
+        opacity: 0;
+        transition-duration: 0.3s;
+    }
+    &__time{
+        color: #FEAC1C;
+    }
+}
+.swiper-slide-active{
+    .slide-documents__desc{
+        opacity: 1;
+        // transition-delay: 0.3s;
+        // transition-delay: 0s;
+    }
+}
+
+
+
 .documents-item{
     cursor: pointer;
 }
