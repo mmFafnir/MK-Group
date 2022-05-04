@@ -29,9 +29,43 @@ const MOBILE_SIZE = 550;
 burgerIcon.addEventListener('click', () => {
     burgerMenu.classList.toggle('active');
     burgerIcon.classList.toggle('active');
+    if(!header.classList.contains('header_color')){
+        header.classList.add('header_color')
+    }
     body.classList.toggle('lock');
 })
 
+
+
+let lastScroll = 0;
+const defaultOffset = 200;
+
+const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
+const containHide = () => header.classList.contains('header_hide');
+
+window.addEventListener('scroll', () => {
+    if(scrollPosition() > lastScroll && !containHide() && scrollPosition() > defaultOffset) {
+        //scroll down
+        header.classList.add('header_hide');
+    }
+    else if(scrollPosition() < lastScroll && containHide()){
+        //scroll up
+        header.classList.remove('header_hide');
+    }
+
+    lastScroll = scrollPosition();
+})
+
+function addHeaderColor(){
+    if (window.pageYOffset > 10) {
+       header.classList.add('header_color');
+    } else {
+      header.classList.remove('header_color');
+    }
+}
+
+window.onscroll=addHeaderColor;
+addHeaderColor();
 
 const btnBottom = document.querySelector('.btn-to-bottom');
 if(btnBottom){
@@ -42,9 +76,10 @@ if(btnBottom){
 }
 
 const path = {
-    MAIN: '/MK-Group/',
-    WORKS: '/MK-Group/works.html'
-} 
+    MAIN: '/',
+    WORKS: '/works.html'
+}
+ 
 if(window.location.pathname == path.MAIN) {
     const currentLinkTo = localStorage.get('linkTo');
     if(currentLinkTo){
@@ -116,7 +151,7 @@ if (animItems.length > 0) {
       animOnScroll()
    }, 300);
 }
-    const swiper = new Swiper('.works-swiper', {
+      const swiper = new Swiper('.works-swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -140,26 +175,48 @@ if (animItems.length > 0) {
       el: '.swiper-scrollbar',
     },
     
-    breakpoints: {
-      
-      666: {
-        slidesPerView: 3,
-      },
-
-      490 :{
-        slidesPerView: 2,
-      }
-    }
-  });
   
-  const currentSlideBlock = document.querySelector('.current-slide');
-  const allSlidesPartners  = document.querySelectorAll('.partners-slide').length;
+  });
+
+  
+  // const swiperDocuments = new Swiper('.swiper-documents', {
+  //   // Optional parameters
+  //   direction: 'horizontal',
+  //   loop: false,
+  //   slidesPerView: 4,
+  //   // loopAdditionalSlides: 8,
+  //   spaceBetween: 40,
+  
+  //   // If we need pagination
+  //   pagination: {
+  //     el: '.swiper-pagination',
+  //   },
+  
+  //   // Navigation arrows
+  //   navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  //   },
+  
+  //   // And if we need scrollbar
+  //   scrollbar: {
+  //     el: '.swiper-scrollbar',
+  //   },
+    
+  
+  // });
+
+  
+
+
+  // const currentSlideBlock = document.querySelector('.current-slide');
+  // const allSlidesPartners  = document.querySelectorAll('.partners-slide').length;
 
   const swiperPartners = new Swiper('.partners-swiper', {
     // Optional parameters
     direction: 'horizontal',
-    slidesPerView: 1,
-    loop: true,
+    slidesPerView: 3,
+    loop: false,
     spaceBetween: 10,
     
     // If we need pagination
@@ -179,22 +236,45 @@ if (animItems.length > 0) {
     },
 
     breakpoints: {
-      550: {
-        slidesPerView: 3,
+      900:{
+        slidesPerView: 5,
       }
     },
-
     on: {
-      slideChange: function(){
+      // slideChange: function(){
 
-        const index_currentSlide = this.realIndex + 1;
-        currentSlideBlock.innerHTML = `<b>0${index_currentSlide}</b>/0${allSlidesPartners}`
+      //   const index_currentSlide = this.realIndex + 1;
+      //   currentSlideBlock.innerHTML = `<b>0${index_currentSlide}</b>/0${allSlidesPartners}`
 
       
-      }
+      // }
     }
   });
-  console.log(swiperPartners)
+  
+
+
+  const swiperDocuments = new Swiper('.swiper-documents', {
+    // Optional parameters
+    direction: 'horizontal',
+    slidesPerView: 4,
+    loop: false,
+    spaceBetween: 10,
+  
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
 }
 if(window.location.pathname == path.WORKS){
     const navLinks = document.querySelectorAll('a[href*="#"]');
