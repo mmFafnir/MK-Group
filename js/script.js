@@ -76,8 +76,8 @@ if(btnBottom){
 }
 
 const path = {
-    MAIN: 'https://gidro-vanna.com/',
-    WORKS: '/works.html'
+    MAIN: '/MK-Group/',
+    WORKS: '/MK-Group/works.html'
 }
 console.log(window.location)
 if(window.location.pathname == path.MAIN) {
