@@ -76,7 +76,7 @@ if(btnBottom){
 }
 
 const path = {
-    MAIN: '/',
+    MAIN: 'https://gidro-vanna.com/',
     WORKS: '/works.html'
 }
  
