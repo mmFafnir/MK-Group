@@ -75,8 +75,8 @@ if(btnBottom){
     })
 }
 const path = {
-    MAIN: '/',
-    WORKS: '/works.html'
+    MAIN: '/MK-Group/',
+    WORKS: '/MK-Group/works.html'
 }
 const documentsSwiper = document.querySelector('.swiper-documents');
 
