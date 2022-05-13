@@ -75,8 +75,8 @@ if(btnBottom){
     })
 }
 const path = {
-    MAIN: '/',
-    WORKS: '/works.html'
+    MAIN: 'https://mmfafnir.github.io/MK-Group/',
+    WORKS: 'https://mmfafnir.github.io/MK-Group/works.html'
 }
 const documentsSwiper = document.querySelector('.swiper-documents');
 
