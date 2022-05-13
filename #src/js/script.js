@@ -13,7 +13,7 @@ const scrollInto = (blockId) => {
         behavior: 'smooth',
         block: 'start'
     });
-}
+s}
 
 @@include('./_header.js')
 
@@ -24,12 +24,25 @@ if(btnBottom){
         scrollInto('about')
     })
 }
-
 const path = {
     MAIN: '/',
     WORKS: '/works.html'
 }
- 
+const documentsSwiper = document.querySelector('.swiper-documents');
+
+// const changeWidthDocuments = (width) => {
+    
+//     if(width < 1036){
+//         documentsSwiper.style.width = '309.75px'
+//     } else if(width < 932 && ) {
+//         documentsSwiper.style.width = '436.75px'
+//     } else if (width < 840) {
+//         documentsSwiper.style.width = '100%'
+//     } else {    
+//         documentsSwiper.style.width = '248.75px'
+//     }
+// } 
+
 if(window.location.pathname == path.MAIN) {
     const currentLinkTo = localStorage.get('linkTo');
     if(currentLinkTo){
@@ -52,8 +65,13 @@ if(window.location.pathname == path.MAIN) {
             }
         })
     }
+    // changeWidthDocuments(window.innerWidth)
+    window.addEventListener('resize', (e) => {
+        if(documentsSwiper) {
+            // changeWidthDocuments(window.innerWidth)
+        }
+    })
 
-    @@include('./_scrollAnim.js')
     @@include('./_swipers.js')
 }
 if(window.location.pathname == path.WORKS){
@@ -66,4 +84,10 @@ if(window.location.pathname == path.WORKS){
             window.location.pathname = path.MAIN
         })
     })
+
+    @@include('./_works.js')
 }
+
+
+@@include('./_scrollAnim.js')
+

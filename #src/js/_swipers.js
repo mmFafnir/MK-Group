@@ -103,7 +103,7 @@
   const swiperDocuments = new Swiper('.swiper-documents', {
     // Optional parameters
     direction: 'horizontal',
-    slidesPerView: 4,
+    slidesPerView: 1,
     loop: false,
     spaceBetween: 10,
   

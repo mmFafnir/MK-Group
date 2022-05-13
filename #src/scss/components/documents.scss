@@ -3,15 +3,18 @@
 
     padding: 50px 10px;
     &__body{
+        overflow: hidden;
         // display: flex;
         // justify-content: space-between;
     }
 }
 
 
-.swiper-documents {
+.swiper-documents { 
+    width: 248.75px;
+    margin: 1px 1px;
+    overflow: visible;
 
-    
     &__nav{
         height: 70px;
         position: relative;
@@ -31,7 +34,7 @@
         }
         
         .swiper-pagination {
-            margin-top: 14px;
+            margin-top: 19px;
             position: relative;
             display: flex;
             justify-content: center;
@@ -62,16 +65,20 @@
 
 .slide-documents{
     height: 467px;
-
+    cursor: pointer;
     &__img{
         height: 382px;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        transition-duration: 0.3s;
         img{
             object-fit: contain;
         }
+            &:hover{
+                background-color: rgba(229, 193, 130, 0.72);
+            }
     }
     &__desc{
         width: 100%;
@@ -105,5 +112,8 @@
             flex-wrap: wrap;
             justify-content: start;
         }
+    }
+    .swiper-documents {
+        width: 100%;
     }
 }

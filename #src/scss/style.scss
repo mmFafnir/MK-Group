@@ -1,6 +1,6 @@
+@import 'fonts.scss';
 @import 'null.scss';
 @import 'var.scss';
-@import 'fonts.scss';
 
 @import 'anim.scss';
 img{
@@ -15,7 +15,9 @@ img{
 
 .body{
     position: relative;
-    font-family: 'Montserrat', sans-serif;
+    
+font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     .lock{
         overflow: hidden;
     }
@@ -25,7 +27,7 @@ img{
     overflow: hidden;
 }
 
-h1,h2,h3,h4,a,p{
+h1,h2,h3,h4,a,p{    
     font-family: 'Montserrat', sans-serif;
 
 }
@@ -60,7 +62,7 @@ h1,h2,h3,h4,a,p{
 }
 
 .btn{
-        width: 381.63px;
+        width: 376px;
         height: 89.11px;
     
         display: block;
@@ -85,6 +87,7 @@ h1,h2,h3,h4,a,p{
         span:hover{
             background: transparent;
             transition-delay: 0s;
+            color:#E5C182;
             
         }
 
@@ -133,8 +136,7 @@ h1,h2,h3,h4,a,p{
 }
 
 @import 'components/documents.scss';
-@import 'components/works-page.scss'
-;
+@import 'components/works-page.scss';
 @import 'components/footer.scss';
 
 .windmill{
@@ -152,11 +154,11 @@ h1,h2,h3,h4,a,p{
     .blades{
         transform-origin: center;
         transform: rotate(45deg);
-        width: 95%;
+        width: 140%;
         object-fit: contain;
-        height: 95%;
-        top: -14.5%;
-        left: -1.4%;
+        height: 140%;
+        top: -36.6%;
+        left: -24.1%;
         animation-name: windmill;
         animation-duration: 5s;
         animation-iteration-count: infinite;

@@ -1,6 +1,8 @@
 
 .footer {
-    background-color: #212121;
+    background: radial-gradient(221.61% 1322.91% at 72.68% 67.45%, rgba(255, 255, 255, 0.08) 0%, rgba(0, 0, 0, 0) 100%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    linear-gradient(0deg, #212121, #212121);
+
     padding: 100px 10px;
     &__wrapper {
         display: flex;
