@@ -78,6 +78,7 @@ const path = {
     MAIN: 'https://mmfafnir.github.io/MK-Group/',
     WORKS: 'https://mmfafnir.github.io/MK-Group/works.html'
 }
+console.log(window.location.pathname)
 const documentsSwiper = document.querySelector('.swiper-documents');
 
 // const changeWidthDocuments = (width) => {
