@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>МК Групп - Наши работы</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+  />
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="works-page">
+  <div class="wrapper">
+    @@include('components/_header.html', {
+        'page': 'works' 
+        
+    })
+    <main>
+        <div class="works-page__body ">
+                <div class="work">
+                    <h2 class="works__title title limiting"><span>Наши проекты</span></h2>
+                    <div class="work__body works__body limiting">
+                        <div class="works__left">
+                            <div class="works__swiper works-swiper limiting">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="swiper-slide__img">
+                                            <img src="img/works/1.jpg" alt="">
+                                            <div class="swiper-slide__desc">
+                                                <p>
+                                                    Какой-то проект
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-prev">
+                                    <svg width="11" height="22" viewBox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="10.37" y1="0.336336" x2="0.36997" y2="11.3363" stroke="white"/>
+                                        <line x1="0.36997" y1="10.6637" x2="10.37" y2="21.6637" stroke="white"/>
+                                    </svg>          
+                                </div>
+                                <div class="swiper-button-next">
+                                    <svg width="11" height="22" viewBox="0 0 11 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="0.63003" y1="21.6637" x2="10.63" y2="10.6637" stroke="white"/>
+                                        <line x1="10.63" y1="11.3363" x2="0.630031" y2="0.336336" stroke="white"/>
+                                    </svg>    
+                                </div>            
+                            </div>
+                        </div>
+                        <div class="works__right">
+                            
+                            <div class="works__text">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos repudiandae blanditiis repellat est, deleniti dolorem velit labore odit magnam reprehenderit itaque quam maxime soluta corrupti nesciunt! Quidem aperiam delectus vitae.
+                                </p>
+                            </div>
+                            <div class="work__nav work-nav">
+                                 <div class="work-nav__item">
+                                     <img src="./img/works/work1/1.jpg" alt="#">
+                                 </div>
+                                 <div class="work-nav__item">
+                                    <img src="./img/works/work1/1.jpg" alt="#">
+                                </div>
+                                <div class="work-nav__item">
+                                    <img src="./img/works/work1/1.jpg" alt="#">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+        </div>
+    </main>
+    @@include('./components/_contacts.html')
+    @@include('components/_footer.html')
+  </div>
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
+

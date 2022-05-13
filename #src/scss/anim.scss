@@ -1,0 +1,127 @@
+
+.anim-top{
+    transform: translate(0px, -10px);
+    transition-duration: 0.5s;
+    opacity: 0;
+}
+.anim-bottom{
+    opacity: 0;
+    transform: translate(0px, 10px);
+    transition-duration: 0.5s;
+
+}
+.anim-left{
+    opacity: 0;
+    transform: translate(-10px, 0px);
+    transition-duration: 0.5s;
+
+}
+.anim-right{
+    transform: translate(10px, 0px);
+    opacity: 0;
+    transition-duration: 0.5s;
+
+}
+.anim-opacity{
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+
+.__anim-item{
+
+    .title{   
+        &::before{
+            transform: translateX(30px);
+            opacity: 0;
+            transition-duration: 0.5s;
+        }
+        span{
+            transform: translateX(30px);
+            opacity: 0;
+            transition-duration: 0.5s;
+            transition-delay: 0.3s;
+        }
+    }
+
+    .works-slide{
+        transform: scale(1, 0);
+        transform-origin: bottom;
+        opacity: 0;
+        transition-duration: 0.5s;
+        transition-delay: 0.5s;
+    }
+}    
+
+
+
+.__active{
+    // opacity: 1;
+    // transform: translate(0px);
+
+    .anim-top{
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+    .anim-bottom{
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+    .anim-left{
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+    .anim-right{
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+    .anim-opacity{
+        opacity: 1;
+    }
+
+    .title{
+    
+        &::before{
+            transform: translateX(0px);
+            opacity: 1;
+        }
+        span{
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+    
+    .works-slide{
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+    
+}
+
+.d-3s{
+    transition-delay: 0.1s;
+    transition-property: transform, opacity; 
+}
+.d-5s{
+    transition-property: transform, opacity;
+    transition-delay: 0.2s;
+}
+.d-7s{
+    transition-property: transform, opacity;
+    transition-delay: 0.3s;
+}
+.d-9s{
+    transition-property: transform, opacity;
+    transition-delay: 0.4s;
+}
+.d-11s{
+    transition-property: transform, opacity;
+    transition-delay: 0.5s;
+}
+.d-13s{
+    transition-property: transform, opacity;
+    transition-delay: 0.6s;
+}
+.d-15s{
+    transition-property: transform, opacity;
+    transition-delay: 0.7s;
+}

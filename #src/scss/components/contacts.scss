@@ -1,0 +1,131 @@
+
+
+.contacts {
+    position: relative;
+    // overflow-x: hidden;
+    overflow: hidden;
+    > svg{
+        position: absolute;
+        left: 0px;
+        bottom: -60%;
+        z-index: -1;
+    }
+    padding: 100px 10px;
+    // .contacts__wrapper
+
+    &__wrapper {
+    }
+
+    // .contacts__title
+
+    &__title {
+        // margin-bottom: 72px;
+    }
+
+    // .contacts__body
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .contacts__left
+
+    &__left {
+        flex: 0 1 593px;
+        margin-right: 20px;
+    }
+
+    // .contacts__img
+
+    &__img {
+        width: 100%;
+        height: 484px;
+        // box-shadow: 0px 55px 94px -28px rgba(0, 0, 0, 0.28);
+        // border-radius: 16px;
+        overflow: hidden;
+        
+    }
+
+    // .contacts__right
+
+    &__right {
+        flex: 0 1 410px;
+    }
+
+    // .contacts__text
+
+    &__text {
+        
+    }
+
+    // .contacts__item
+
+    &__item {
+    }
+}
+.contacts-item {
+    margin-bottom: 10px;
+    font-size: 18px;
+    display: flex;
+    line-height: 1.3;
+    max-width: 380px;
+    a{
+        color: #000000;
+        font-size: 18px;
+
+        &:hover{
+            text-decoration:underline;
+        }
+    }
+
+}
+
+@media (max-width: 700px) {
+    .contacts {
+        padding: 100px 0px;
+    }
+    .contacts__body{
+        flex-wrap: wrap;
+        // justify-content: center;
+    }
+    .contacts__left{
+        margin-right: 0px;
+        margin-bottom: 30px;
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: center;
+    }
+    .contacts__img{
+        flex: 1 1 auto;
+    }
+    .contacts__right{
+        padding: 0px 10px;
+    }
+    .contacts__title{   
+        margin-bottom: 20px;
+    }
+    .contacts__text{
+        // margin-top: 4    2px;
+
+    }
+}
+
+@media (max-width: 550px) {
+    .contacts{
+        padding: 100px 0px;
+
+        &__title{
+            padding: 0px 10px;
+        }
+        &__right{
+            padding: 0px 10px;
+        }
+
+        &__img{
+            border-radius: 0px;
+            box-shadow: none;
+        }
+    }
+}

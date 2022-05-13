@@ -1,0 +1,205 @@
+@import 'fonts.scss';
+@import 'null.scss';
+@import 'var.scss';
+
+@import 'anim.scss';
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    // position: absolute;
+    // top: 0px;
+    // left: 0px;
+
+}
+
+.body{
+    position: relative;
+    
+font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    .lock{
+        overflow: hidden;
+    }
+
+}
+.lock{
+    overflow: hidden;
+}
+
+h1,h2,h3,h4,a,p{    
+    font-family: 'Montserrat', sans-serif;
+
+}
+.wrapper{
+    overflow: hidden;
+}
+
+.limiting{
+    max-width: 1025px; 
+    margin: 0 auto;
+
+}
+
+.title{
+    font-size: 40px;
+    font-weight: 700;
+    align-items: center;
+    display: flex;
+    margin-bottom: 45px;
+    
+
+    // &::before{
+    //     content: '';
+    //     display: block;
+    //     margin-right: 10px;
+    //     background-color: #002EFE;
+    //     width: 11px;
+    //     height: 11px;
+    //     border-radius: 50%;
+
+    // }
+}
+
+.btn{
+        width: 376px;
+        height: 89.11px;
+    
+        display: block;
+        
+        font-size: 15px;
+        font-weight: 700;
+        border: solid 1px #E5C182;
+        text-transform: uppercase;
+        font-family:inherit;
+        margin-top: 60px;
+        span{
+            background-color: #E5C182; 
+            color: #AA6B00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            font-family: 'Montserrat', sans-serif;
+            transition-duration: 0.3s;
+        }
+        span:hover{
+            background: transparent;
+            transition-delay: 0s;
+            color:#E5C182;
+            
+        }
+
+}
+@import 'components/header.scss';
+@import 'components/home.scss';
+@import 'components/about.scss';
+@import 'components/works.scss';
+@import 'components/partners.scss';
+@import 'components/contacts.scss';
+
+.bg{
+    position: relative;
+    overflow: hidden;
+    &__img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__fgr{
+        
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        // left: 50%;
+        // transform: translateX(-50%);
+
+        // img{
+            
+        //     position: absolute;
+        //     height: 1000px;
+        //     width: 600px;
+            
+        // }
+        
+    }
+
+}
+
+@import 'components/documents.scss';
+@import 'components/works-page.scss';
+@import 'components/footer.scss';
+
+.windmill{
+    position: absolute;
+    height: 1000px;
+    width: 600px;
+    bottom: -8%;
+    right: -140px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+    .blades{
+        transform-origin: center;
+        transform: rotate(45deg);
+        width: 140%;
+        object-fit: contain;
+        height: 140%;
+        top: -36.6%;
+        left: -24.1%;
+        animation-name: windmill;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    &.mill-blur{
+        filter: blur(9px);
+        right: auto;
+        left: -10%;
+        bottom: 35%;
+        width: 650px;
+        height: 870px;
+        .blades{
+            width: 70%;
+            height: auto;
+            top: 3%;
+            left: 73px;
+        }
+    }
+}
+
+@keyframes windmill {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+@media (max-width: 600px) {
+ .bg{
+     &__fgr{
+         display: none;
+     }
+ }   
+}
+@media (max-width: 390px) {
+    .btn{
+        width: 260px;
+        height: 78.11px;
+    }
+}
