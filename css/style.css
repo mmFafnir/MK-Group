@@ -1989,6 +1989,12 @@ p {
   }
 }
 
+@media (max-width: 555px) {
+  .home__wrapper {
+    width: 100%;
+  }
+}
+
 @media (max-width: 550px) {
   .home h2 {
     font-size: 35px;
