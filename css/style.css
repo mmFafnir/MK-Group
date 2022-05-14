@@ -769,6 +769,9 @@ p {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 421px;
           flex: 0 1 421px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -818,7 +821,7 @@ p {
       -ms-flex: 0 1 201px;
           flex: 0 1 201px;
   margin-right: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2005,8 +2008,7 @@ p {
   }
 
   .home__btn {
-    width: 272px;
-    font-size: 10px;
+    font-size: 15px;
   }
 
   .home__advantages {
