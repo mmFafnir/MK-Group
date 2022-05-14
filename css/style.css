@@ -451,8 +451,8 @@ p {
 .header__logo {
   border-radius: 7.61848px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 241px;
-          flex: 0 0 241px;
+      -ms-flex: 0 1 241px;
+          flex: 0 1 241px;
   margin-right: 10px;
   -webkit-transform-origin: left;
       -ms-transform-origin: left;
@@ -500,7 +500,7 @@ p {
   position: relative;
   color: #fff;
   padding: 0px 5px;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .header__nav ul a:before {
@@ -763,6 +763,15 @@ p {
       -ms-flex-align: start;
           align-items: flex-start;
   margin-top: 58px;
+}
+
+.home__advantages > div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 421px;
+          flex: 0 1 421px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .home__fgr-bottom {
@@ -1853,6 +1862,54 @@ p {
             flex: 0 0 400px;
   }
 
+  .header {
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    -webkit-transition-duration: 0.3s;
+         -o-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+  }
+
+  .header_color {
+    background-color: rgba(0, 0, 0, 0.641);
+    position: fixed;
+  }
+
+  .header h2 {
+    color: #fff;
+  }
+
+  .header .logo__wrapper {
+    background-color: transparent;
+  }
+
+  .header .burger-icon::before,
+  .header .burger-icon::after,
+  .header .burger-icon span {
+    background-color: #fff;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header .logo__wrapper {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .burger-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
   .vector-desctop {
     top: -51%;
   }
@@ -1933,54 +1990,6 @@ p {
 }
 
 @media (max-width: 550px) {
-  .header {
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    -webkit-transition-duration: 0.3s;
-         -o-transition-duration: 0.3s;
-            transition-duration: 0.3s;
-  }
-
-  .header_color {
-    background-color: rgba(0, 0, 0, 0.641);
-    position: fixed;
-  }
-
-  .header h2 {
-    color: #fff;
-  }
-
-  .header .logo__wrapper {
-    background-color: transparent;
-  }
-
-  .header .burger-icon::before,
-  .header .burger-icon::after,
-  .header .burger-icon span {
-    background-color: #fff;
-  }
-
-  .header__nav {
-    display: none;
-  }
-
-  .header .logo__wrapper {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-  }
-
-  .burger-menu {
-    display: block;
-  }
-
-  .burger-icon {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
   .home h2 {
     font-size: 35px;
   }
