@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/montserrat.woff") format("woff"), url("../fonts/montserrat.woff2") format("woff2");
+  src: url("../fonts/montserrat.woff") format("woff"), url("../fonts/montserrat.woff2") format(.partners-item-mob"woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -1243,8 +1243,8 @@ p {
 
 .partners-item-mob {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 172px;
-          flex: 0 1 172px;
+      -ms-flex: 0 1 calc(172px  + 20%);
+          flex: 0 1 calc(172px  + 20%);
   height: 106px;
   margin: 10px;
 }
